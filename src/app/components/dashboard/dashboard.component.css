@@ -1,0 +1,21 @@
+.dashboard-container {
+    background: red;
+    height: 100%;
+}
+
+.dashboard-container .bloque1 {
+    background: yellowgreen;
+    height: 100%;
+    width: 100%;
+}
+
+
+/* .dashboard-container .bloque2 {
+    background: blueviolet;
+    height: 100%;
+}
+
+.dashboard-container .bloque3 {
+    background: orange;
+    height: 100%;
+} */

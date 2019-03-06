@@ -1,0 +1,9 @@
+fieldset {
+    padding-top: 20px;
+    background-color: #fff;
+}
+
+fieldset>div {
+    display: inline-block;
+    width: 100%;
+}

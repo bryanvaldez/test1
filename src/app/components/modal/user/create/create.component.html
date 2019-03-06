@@ -1,0 +1,55 @@
+<h1 mat-dialog-title>Información de Cuenta</h1>
+<div mat-dialog-content>
+    <form [formGroup]="form" id="form" (ngSubmit)=" onSubmit()" novalidate>
+        <mat-card-content fxLayout="row wrap">
+
+            <div fxLayout="row" fxFlex="100" fxLayoutAlign="space-around center">
+                <mat-form-field fxFlex="49">
+                    <input type="text" formControlName="sapaterno" matInput placeholder="Apellido Paterno" maxlength="50" required>
+                    <mat-error *ngIf="!!f.sapaterno.errors && !!f.sapaterno.errors.required">Este campo es requerido.</mat-error>
+                </mat-form-field>
+
+                <mat-form-field fxFlex="49">
+                    <input type="text" formControlName="samaterno" matInput placeholder="Apellido Materno" maxlength="50" required>
+                    <mat-error *ngIf="!!f.samaterno.errors && !!f.samaterno.errors.required">Este campo es requerido.</mat-error>
+                </mat-form-field>
+            </div>
+
+            <div fxLayout="row" fxFlex="100" fxLayoutAlign="space-around center">
+                <mat-form-field fxFlex="100">
+                    <input type="text" formControlName="snombres" matInput placeholder="Nombres" maxlength="50" required>
+                    <mat-error *ngIf="!!f.snombres.invalid && !!f.snombres.errors.required">Este campo es requerido.</mat-error>
+                </mat-form-field>
+            </div>
+            <div fxLayout="row" fxFlex="100" fxLayoutAlign="space-around center">
+                <mat-form-field fxFlex="100">
+                    <input type="email" formControlName="smail" matInput placeholder="Correo Electronico" maxlength="50" required>
+                    <mat-error *ngIf="!!f.smail.errors && !!f.smail.errors.required">Este campo es requerido.</mat-error>
+                    <mat-error *ngIf="!!f.smail.errors && !!f.smail.errors.email">Correo invalido.</mat-error>
+                </mat-form-field>
+
+            </div>
+
+            <h3 style="text-decoration: underline;">Ingrese su palabra clave y repitala</h3>
+
+            <div fxLayout="row" fxFlex="100" fxLayoutAlign="space-around center">
+                <mat-form-field fxFlex="100">
+                    <input type="password" formControlName="spwd" [(ngModel)]="word" matInput placeholder="Palabra Clave" autocomplete="off" maxlength="20" required>
+                    <mat-error *ngIf="!!f.spwd.errors && !!f.spwd.errors.required">Este campo es requerido.</mat-error>
+                    <mat-icon matSuffix>vpn_key</mat-icon>
+                </mat-form-field>
+                <!-- <mat-form-field fxFlex="49">
+                    <input type="password" formControlName="spwd" matInput placeholder="Palabra Clave(r)" autocomplete="off" maxlength="20" [required]="">
+                    <mat-error *ngIf="!!f.spwd.errors && !!f.spwd.errors.required">Este campo es requerido.</mat-error>
+                    <mat-error *ngIf="!!f.spwd.errors && !!f.spwd.errors.same">Custom.</mat-error>
+                    <mat-icon matSuffix>vpn_key</mat-icon>
+                </mat-form-field> -->
+            </div>
+            <!-- <p>{{form.controls.spwd.value }} | {{form.controls.spwd0.value }} </p> -->
+        </mat-card-content>
+    </form>
+</div>
+<div mat-dialog-actions fxLayoutAlign="space-between start">
+    <button [disabled]="!form.valid" type="submit" form="form" mat-stroked-button color="primary" fxFlex="45" mat-button>Registrar</button>
+    <button (click)="onNoClick()" mat-stroked-button color="primary" fxFlex="45" mat-button>Cancelar</button>
+</div>

@@ -1,0 +1,37 @@
+<div fxLayout="column" class="bg_main" style="height: 100%;">
+    <div fxLayout="column" fxLayoutAlign="center center" style="height: 100%;background: rgba(1, 7, 14, 0.6);">
+        <mat-card class="loginForm" style="height: 330px;margin-top: -50px;">
+            <form name="form" (ngSubmit)="f.form.valid && login()" #f="ngForm" novalidate>
+                <mat-card-content fxLayout="row wrap">
+                    <mat-form-field fxFlex="100" style="margin-bottom: 15px;margin-top: 20px;">
+                        <input (input)="clean()" id="username" name="username" [(ngModel)]="model.username" #username="ngModel" matInput placeholder="Usuario" autocomplete="off" maxlength="20" required>
+                        <mat-error *ngIf="!username.valid">Este campo es requerido.</mat-error>
+                        <mat-icon matSuffix>account_box</mat-icon>
+                    </mat-form-field>
+                    <mat-form-field fxFlex="100" style="margin-bottom: 15px;">
+                        <input (input)="clean()" id="password" name="password" [(ngModel)]="model.password" #password="ngModel" matInput placeholder="Contraseña" type="password" autocomplete="off" maxlength="20" required>
+                        <mat-error *ngIf="!password.valid">Este campo es requerido.</mat-error>
+                        <mat-icon matSuffix>vpn_key</mat-icon>
+                    </mat-form-field>
+                </mat-card-content>
+                <mat-card-actions fxLayoutAlign="center center">
+                    <button fxFlex="80" mat-stroked-button color="primary">Ingresar</button>
+                </mat-card-actions>
+                <p class="message">{{message}}</p>
+            </form>
+
+            <div fxLayout="column" fxLayoutAlign="end start" class="footer_button">
+                <br>
+                <a (click)="iModal(1)" fxFlex="100" class="idcEnlace"> Click aqui para crear una nueva cuenta.</a>
+                <!-- <a (click)="iModal(2)" fxFlex="100" class="idcEnlace">Olvido su contraseña.</a> -->
+            </div>
+
+        </mat-card>
+        <!-- <div class="loginLimit">
+            <p>divide</p>
+        </div>
+        <div class="loginLimit">
+            En caso no pueda acceder, comuníquese al (01) 417-0630
+        </div> -->
+    </div>
+</div>

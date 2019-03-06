@@ -1,0 +1,13 @@
+<fieldset>
+    <mat-form-field class="example-full-width" fxFlex="100">
+        <input (keyup.enter)="submitText(text.value)" matInput placeholder="Search" #text>
+    </mat-form-field>
+    <mat-selection-list>
+        <!-- <mat-list-option [routerLink]="['/register', key]" *ngFor="let item of listPadron">
+            {{ list.label }}
+        </mat-list-option> -->
+        <mat-list-option (click)="showRegister(item)" *ngFor="let item of listPadron">
+            {{ item.label }}
+        </mat-list-option>
+    </mat-selection-list>
+</fieldset>

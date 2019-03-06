@@ -1,0 +1,21 @@
+<mat-card class="example-card">
+    <mat-card-header>
+        <div mat-card-avatar>
+            <mat-icon matTooltip="Salir del Sistema" matTooltipPosition="below" class="iconHeader">
+                dashboard
+            </mat-icon>
+        </div>
+        <mat-card-title>Titulo {{ item.key }}</mat-card-title>
+        <mat-card-subtitle>{{ item.label }}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+    <mat-card-content>
+        <p>
+            Descripcion de Modulo
+        </p>
+    </mat-card-content>
+    <mat-card-actions>
+        <button mat-button (click)="submitCard('like')">Ingresar</button>
+        <!-- <button mat-button (click)="submitCard('share')">SHARE</button> -->
+    </mat-card-actions>
+</mat-card>

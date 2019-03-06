@@ -1,0 +1,65 @@
+/* Custom Material */
+
+.nav-header {
+    background: black;
+    padding: 0;
+}
+
+.nav-header .logo {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-header .logo img {
+    max-width: 90%;
+    max-height: 90%;
+    height: auto;
+    box-sizing: border-box;
+    border: 0;
+    vertical-align: middle;
+}
+
+.nav-header .logo span {
+    font-size: 13px;
+    color: white;
+}
+
+.nav-header .logo mat-icon {
+    font-size: 25px;
+    color: white;
+}
+
+
+/* .nav-header .title {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    color: #5A6523;
+    font-size: 30px;
+    border-bottom: #879E0F 5px solid;
+    padding-left: 15px;
+}
+
+.mat-mini-fab:not([class*=mat-elevation-z]) {
+    transition: none;
+    box-shadow: none;
+}
+
+.example-icon {
+    padding: 0 14px;
+}
+
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+.iconheader {
+    margin: 0;
+    padding: 0;
+}
+
+.btnHeader {
+    background-color: transparent;
+} */

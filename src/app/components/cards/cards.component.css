@@ -1,0 +1,21 @@
+.module {
+    padding-top: 20px;
+    background-color: #fff;
+    height: 100%;
+}
+
+app-item {
+    margin: 3px;
+}
+
+th {
+    background-color: #0288D1;
+    color: #fff;
+    text-align: center!important;
+}
+
+td {
+    border-right: 1px solid rgba(0, 0, 0, .14);
+    padding: 5px;
+    text-align: center
+}

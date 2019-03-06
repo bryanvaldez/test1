@@ -1,0 +1,58 @@
+<div fxLayout="column" style="height: 100%;">
+
+    <div class="module" fxLayout="row wrap" fxLayoutAlign="center start">
+        <div style="display: flex;width: 100%;margin-left: 30px;">
+            <button mat-fab style="background: #e39e0e;margin: 10px;">
+                    <mat-icon class="material-icons"aria-label="Agregar">add</mat-icon>
+            </button>
+            <h2>Agregar Archivo</h2>
+        </div>
+
+        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" fxFlex="95">
+
+            <ng-container matColumnDef="position">
+                <th mat-header-cell *matHeaderCellDef> Nro </th>
+                <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="titulo">
+                <th mat-header-cell *matHeaderCellDef> Titulo </th>
+                <td mat-cell *matCellDef="let element"> {{element.titulo}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="version">
+                <th mat-header-cell *matHeaderCellDef> Versión </th>
+                <td mat-cell *matCellDef="let element"> {{element.version}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="publicacion">
+                <th mat-header-cell *matHeaderCellDef> Publicación </th>
+                <td mat-cell *matCellDef="let element"> {{element.publicacion}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="descripcion">
+                <th mat-header-cell *matHeaderCellDef> Descripción </th>
+                <td mat-cell *matCellDef="let element"> {{element.descripcion}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="size">
+                <th mat-header-cell *matHeaderCellDef> Tamaño </th>
+                <td mat-cell *matCellDef="let element"> {{element.size}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="archivo">
+                <th mat-header-cell *matHeaderCellDef> Archivo </th>
+                <td mat-cell *matCellDef="let element"> {{element.archivo}} </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+
+
+
+        <!-- 
+        <app-item (emitCard)="submit($event)" [item]="item" fxFlex="24" fxFlex.lt-sm="100" *ngFor="let item of list">
+        </app-item> -->
+    </div>
+</div>

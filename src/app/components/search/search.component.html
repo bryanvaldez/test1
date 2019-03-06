@@ -1,0 +1,8 @@
+<fieldset>
+    <h3>Texto de Busqueda: {{ wordSearch }}</h3>
+    <mat-selection-list>
+        <mat-list-option *ngFor="let item of listPadron">
+            {{ item.label }}
+        </mat-list-option>
+    </mat-selection-list>
+</fieldset>
