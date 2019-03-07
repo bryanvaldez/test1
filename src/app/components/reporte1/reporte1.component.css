@@ -41,3 +41,130 @@
     border-radius: 5px;
     margin: 0 3px 0 8px;
 }
+
+.listColor_np,
+.listColor_p,
+.listColor_pf,
+.listColor_1,
+.listColor_2,
+.listColor_3,
+.listColor_4,
+.listColor_5,
+.listColor_6,
+.listColor_7,
+.listColor_8,
+.listColor_9,
+.listColor_10,
+.listColor_11,
+.listColor_12,
+.listColor_13 {
+    width: 10px;
+    min-width: 10px;
+    max-width: 10px;
+    height: 10px;
+    min-height: 10px;
+    max-height: 10px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    margin: 0 3px 0 8px;
+}
+
+.listColor_np span,
+.listColor_p span,
+.listColor_pf span,
+.listColor_1 span,
+.listColor_2 span,
+.listColor_3 span,
+.listColor_4 span,
+.listColor_5 span,
+.listColor_6 span,
+.listColor_7 span,
+.listColor_8 span,
+.listColor_9 span,
+.listColor_10 span,
+.listColor_11 span,
+.listColor_12 span,
+.listColor_13 span {
+    display: none;
+    background: #ffffff;
+    width: 6px;
+    min-width: 6px;
+    max-width: 6px;
+    height: 6px;
+    min-height: 6px;
+    max-height: 6px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+
+/* lista 1 */
+
+.listColor_p {
+    background: #61E296;
+    /*background: #4CAF50;*/
+    /*background: #20c1bd;*/
+}
+
+.listColor_pf {
+    background: #F9EC73;
+    /*background: #fccf4d;*/
+    /*background: #494c59;*/
+}
+
+.listColor_np {
+    background: #F75969;
+    /*background: #F44336;*/
+    /*background: #20c1bd;*/
+}
+
+.listColor_1 {
+    background: #6AEAD1;
+    /*background: #20c1bd;*/
+}
+
+.listColor_2 {
+    background: #5c9abf;
+    /*background: #4e91fb;*/
+}
+
+.listColor_3 {
+    background: #D7F277;
+    /*background: #fccf4d;*/
+    /*background: #494c59;*/
+}
+
+.listColor_4 {
+    background: #9EF2F0;
+    /*background: #27d8d8;*/
+}
+
+.listColor_5 {
+    background: #dcb5ff;
+    /*background: #dbdb6b;*/
+}
+
+.listColor_6 {
+    background: #f297cd;
+    /*background: #03818e;*/
+}
+
+
+/* Lista 2 */
+
+.listColor_7 {
+    background: #90c2f4;
+    /*background: #1a2c5b;*/
+}
+
+.listColor_8 {
+    background: #aa92f4;
+    /*background: #4848d8;*/
+}
+
+.listColor_9 {
+    background: #abbfd3;
+    /*background: #98c9ed;*/
+}

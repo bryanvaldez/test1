@@ -1,36 +1,15 @@
-<!-- <div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutWrap="wrap" class="dashboard-container">
-    <div fxLayout="column" fxFlex="100%" fxFlex.gt-md="50%" fxFlex.lg="33%" class="bloque1">
-        <div fxFlex="20" style="background: rosybrown">1</div>
-        <div fxFlex="40" style="background: salmon">2</div>
-        <div fxFlex="40" style="background: skyblue">3</div>
-    </div>
-    <div fxLayout="column" fxFlex="100%" fxFlex.gt-md="50%" fxFlex.lg="33%" class="bloque2">
-        <div fxFlex="20" style="background: violet">1</div>
-        <div fxFlex="80" style="background: steelblue">2</div>
-    </div>
-    <div fxLayout="column" fxFlex="33" fxFlex.gt-md="100" class="bloque3">
-        <div fxFlex="50" style="background: yellow">1</div>
-        <div fxFlex=" 50 " style="background: yellowgreen ">2</div>
-    </div>
-</div> -->
-
-
-<!-- <div class="dashboard-container" fxLayout fxLayout.xs="column" fxLayoutAlign="start" fxLayoutWrap="wrap">
-    <div class="widget" fxFlex="100%">Large</div>
-</div> -->
-
 <div class="dashboard-container" fxLayout fxLayout="column" fxLayoutAlign="space-between center" fxLayoutWrap="wrap">
-    <div fxLayoutWrap="wrap" fxFlex="10%">
+    <div fxLayoutWrap="wrap" fxFlex="8%">
     </div>
-    <div fxLayout.sm="column" fxLayoutWrap="wrap" fxLayoutAlign="space-around center" fxFlex="90%" class="bloque1">
+    <div fxLayout.sm="column" fxLayoutWrap="wrap" fxLayoutAlign="space-around center" fxFlex="92%" class="bloque1">
         <div fxLayout="column" fxFlex="32%" fxLayoutAlign="space-between center" style="height: 100%;width: 100%;">
-            <div fxFlex="19%" style="width: 100%;">
+            <div fxFlex="17%" style="width: 100%;">
                 <app-reporte1 (typeOrg)="composer($event)"></app-reporte1>
             </div>
-            <div fxFlex="39%" style="width: 100%;">
-                <app-reporte2></app-reporte2>
-            </div>
-            <div fxFlex="39%" style="background: yellow;width: 100%;">3</div>
+            <mat-card fxLayout="column" fxFlex="40%" style="padding: 7px;height: 100%;width: 100%;">
+                <app-reporte2 style="height: 100%;width: 100%" fxLayout="column"></app-reporte2>
+            </mat-card>
+            <div fxFlex="40%" style="background: yellow;width: 100%;">3</div>
         </div>
         <div fxFlex="32%" style="background: salmon;height: 100%;width: 100%;">2</div>
         <div fxFlex="32%" style="background: skyblue;height: 100%;width: 100%;">3</div>
