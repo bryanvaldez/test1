@@ -17,6 +17,7 @@ import { FeatureRoutingModule } from './app.routes';
 // Secutiry
 import { AuthGuard } from './auth.guard';
 
+
 // Components
 import { SearchComponent } from './components/search/search.component';
 import { ItemComponent } from './components/item/item.component';
@@ -30,6 +31,7 @@ import { PadronService } from './services/padron.service';
 import { UsuariosComponent } from './pages/usuarios/usuarios.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { Reporte1Component } from './components/reporte1/reporte1.component';
+import { Reporte2Component } from './components/reporte2/reporte2.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +49,8 @@ import { Reporte1Component } from './components/reporte1/reporte1.component';
     CreateComponent,
     UsuariosComponent,
     DashboardComponent,
-    Reporte1Component
+    Reporte1Component,
+    Reporte2Component
   ],
   imports: [
     BrowserModule,

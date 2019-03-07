@@ -23,11 +23,13 @@
     <div fxLayoutWrap="wrap" fxFlex="10%">
     </div>
     <div fxLayout.sm="column" fxLayoutWrap="wrap" fxLayoutAlign="space-around center" fxFlex="90%" class="bloque1">
-        <div fxLayout="column" fxFlex="32%" fxLayoutAlign="space-between center" style="background: rosybrown;height: 100%;width: 100%;">
-            <div fxFlex="19%" style="background: turquoise;width: 100%;">
+        <div fxLayout="column" fxFlex="32%" fxLayoutAlign="space-between center" style="height: 100%;width: 100%;">
+            <div fxFlex="19%" style="width: 100%;">
                 <app-reporte1 (typeOrg)="composer($event)"></app-reporte1>
             </div>
-            <div fxFlex="39%" style="background: violet;width: 100%;">2</div>
+            <div fxFlex="39%" style="width: 100%;">
+                <app-reporte2></app-reporte2>
+            </div>
             <div fxFlex="39%" style="background: yellow;width: 100%;">3</div>
         </div>
         <div fxFlex="32%" style="background: salmon;height: 100%;width: 100%;">2</div>
