@@ -33,6 +33,10 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { Reporte1Component } from './components/reporte1/reporte1.component';
 import { Reporte2Component } from './components/reporte2/reporte2.component';
 import { Reporte3Component } from './components/reporte3/reporte3.component';
+import { Reporte4Component } from './components/reporte4/reporte4.component';
+import { Reporte5Component } from './components/reporte5/reporte5.component';
+import { Reporte6Component } from './components/reporte6/reporte6.component';
+import { Reporte7Component } from './components/reporte7/reporte7.component';
 
 @NgModule({
   declarations: [
@@ -52,7 +56,11 @@ import { Reporte3Component } from './components/reporte3/reporte3.component';
     DashboardComponent,
     Reporte1Component,
     Reporte2Component,
-    Reporte3Component
+    Reporte3Component,
+    Reporte4Component,
+    Reporte5Component,
+    Reporte6Component,
+    Reporte7Component
   ],
   imports: [
     BrowserModule,

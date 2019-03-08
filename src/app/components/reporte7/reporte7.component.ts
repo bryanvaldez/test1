@@ -8,14 +8,11 @@ import * as am4charts from '@amcharts/amcharts4/charts';
 import am4themes_animated from '@amcharts/amcharts4/themes/animated';
 
 @Component({
-  selector: 'app-reporte2',
-  templateUrl: './reporte2.component.html',
-  styleUrls: ['./reporte2.component.css']
+  selector: 'app-reporte7',
+  templateUrl: './reporte7.component.html',
+  styleUrls: ['./reporte7.component.css']
 })
-
-export class Reporte2Component implements AfterViewInit {
-
-
+export class Reporte7Component implements AfterViewInit {
 
   constructor() { }
 
@@ -24,26 +21,40 @@ export class Reporte2Component implements AfterViewInit {
     let chart: any;
     createChart();
     function createChart() {
-      chart = am4core.create('chartdiv', am4charts.XYChart);
+      chart = am4core.create('chartdiv6', am4charts.XYChart);
       chart.numberFormatter.numberFormat = '#a';
       chart.numberFormatter.bigNumberPrefixes = [{ 'number': 1e+3, 'suffix': 'K', 'prefix': 'S/' }, { 'number': 1e+6, 'suffix': 'M', 'prefix': 'S/' }];
-      chart.data = [{
-        'country': 'PARTIDO POLÍTICO',
-        'year2004': 15151,
-        'year2005': 51156
-        }, {
-        'country': 'MOVIMIENTO REGIONAL',
-        'year2004': 16516,
-        'year2005': 61515
-        }, {
-        'country': 'ORGANIZACIÓN LOCAL(PROVINCIAL)',
-        'year2004': 1651,
-        'year2005': 61515
-        }, {
-        'country': 'ORGANIZACIÓN LOCAL(DISTRITAL)',
-        'year2004': 2166,
-        'year2005': 265561
-        }];
+      chart.data = [
+        {'country': 'PARTIDO POLÍTICO', 'year2004': 15151, 'year2005': 51156}, 
+        {'country': 'MOVIMIENTO REGIONAL', 'year2004': 16516, 'year2005': 61515},
+        {'country': 'ORGANIZACIÓN LOCAL(PROVINCIAL)', 'year2004': 1651, 'year2005': 61515},
+        {'country': 'ORGANIZACIÓN LOCAL(DISTRITAL)', 'year2004': 2166, 'year2005': 265561},
+        {'country': 'ORGANIZACIÓN LOCAL1', 'year2004': 1651, 'year2005': 61515},
+        {'country': 'ORGANIZACIÓN LOCAL2', 'year2004': 1651, 'year2005': 61515},
+        {'country': 'ORGANIZACIÓN LOCAL3', 'year2004': 1651, 'year2005': 61515},
+        {'country': 'ORGANIZACIÓN LOCAL4', 'year2004': 1651, 'year2005': 61515},
+        {'country': 'ORGANIZACIÓN LOCAL5', 'year2004': 1651, 'year2005': 61515},
+        {'country': 'ORGANIZACIÓN LOCAL6', 'year2004': 1651, 'year2005': 61515},
+        {'country': 'ORGANIZACIÓN LOCAL7', 'year2004': 1651, 'year2005': 61515},
+        {'country': 'ORGANIZACIÓN LOCAL8', 'year2004': 1651, 'year2005': 61515},
+        {'country': 'ORGANIZACIÓN LOCAL9', 'year2004': 1651, 'year2005': 61515},
+        {'country': 'ORGANIZACIÓN LOCAL10', 'year2004': 1651, 'year2005': 61515},
+        {'country': 'ORGANIZACIÓN LOCAL11', 'year2004': 1651, 'year2005': 61515},
+        {'country': 'ORGANIZACIÓN LOCAL12', 'year2004': 1651, 'year2005': 61515},
+        {'country': 'ORGANIZACIÓN LOCAL13', 'year2004': 1651, 'year2005': 61515},
+        {'country': 'ORGANIZACIÓN LOCAL14', 'year2004': 1651, 'year2005': 61515},
+        {'country': 'ORGANIZACIÓN LOCAL15', 'year2004': 1651, 'year2005': 61515},
+        {'country': 'ORGANIZACIÓN LOCAL16', 'year2004': 1651, 'year2005': 61515},
+        {'country': 'ORGANIZACIÓN LOCAL17', 'year2004': 1651, 'year2005': 61515},
+        {'country': 'ORGANIZACIÓN LOCAL18', 'year2004': 1651, 'year2005': 61515},
+        {'country': 'ORGANIZACIÓN LOCAL19', 'year2004': 1651, 'year2005': 61515},
+        {'country': 'ORGANIZACIÓN LOCAL20', 'year2004': 1651, 'year2005': 61515},
+        {'country': 'ORGANIZACIÓN LOCAL21', 'year2004': 1651, 'year2005': 61515},
+
+        {'country': 'ORGANIZACIÓN LOCAL22', 'year2004': 1651, 'year2005': 61515}
+
+      ];
+
       const categoryAxis = chart.xAxes.push(new am4charts.CategoryAxis());
       categoryAxis.dataFields.category = 'country';
       categoryAxis.renderer.grid.template.location = 0;
@@ -52,12 +63,11 @@ export class Reporte2Component implements AfterViewInit {
       categoryAxis.cursorTooltipEnabled = false;
       categoryAxis.renderer.labels.template.maxWidth = 150;
       categoryAxis.renderer.labels.template.wrap = true;
-      categoryAxis.marginBottom = -20;
+      categoryAxis.marginBottom = -10;
 
       const valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
       valueAxis.title.fontWeight = 200;
       valueAxis.fontSize = 10;
-      valueAxis.marginLeft = -20;
       valueAxis.cursorTooltipEnabled = false;
 
       const series = chart.series.push(new am4charts.ColumnSeries());
@@ -113,13 +123,25 @@ export class Reporte2Component implements AfterViewInit {
         </table>`;
 
       chart.cursor = new am4charts.XYCursor();
-      chart.cursor.lineX.stroke = am4core.color('#8F3985');
-      chart.cursor.lineX.strokeWidth = '60%';
-      chart.cursor.fullWidthLineX = true;
-      chart.cursor.lineX.strokeOpacity = 0.2;
-      chart.cursor.lineX.strokeDasharray = '';
+      chart.cursor.behavior = 'none';
+      chart.cursor.lineX.opacity = 0;
+      chart.cursor.lineY.opacity = 0;
 
+
+      chart.scrollbarX = new am4core.Scrollbar();
+      chart.scrollbarX.height = 5;
+      chart.scrollbarX.background.fill = am4core.color('green');
+      chart.scrollbarX.fillOpacity = 1;
+      chart.scrollbarX.stroke = am4core.color('rgba(0,0,0,.5)');
+      chart.scrollbarX.strokeWidth = 0.5;
+      chart.scrollbarX.margin(0, 30, 0, 30);
+      chart.scrollbarX.thumb.minWidth = 50;
+
+      chart.scrollbarX.startGrip.hide();
+      chart.scrollbarX.endGrip.hide();
 
     }
+
   }
+
 }

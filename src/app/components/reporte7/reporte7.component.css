@@ -1,0 +1,19 @@
+.franjaTitulo {
+    height: 40px;
+    min-height: 40px;
+    max-height: 40px;
+}
+
+.franja_titulo {
+    background-color: #eeeff3;
+    margin: 0 5px;
+    min-height: 40px;
+    width: 8px;
+}
+
+.text_titulo_map {
+    margin-left: 3px;
+    color: #3C4858;
+    font-weight: 600;
+    font-size: 16px;
+}

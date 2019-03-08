@@ -2,7 +2,7 @@
     <div fxLayoutWrap="wrap" fxFlex="8%">
     </div>
     <div fxLayout.sm="column" fxLayoutWrap="wrap" fxLayoutAlign="space-around center" fxFlex="92%" class="bloque1">
-        <div fxLayout="column" fxFlex="32%" fxLayoutAlign="space-between center" style="height: 100%;width: 100%;">
+        <div fxLayout="column" fxFlex="33%" fxLayoutAlign="space-between center" style="height: 100%;width: 100%;">
             <div fxFlex="17%" style="width: 100%;">
                 <app-reporte1 (typeOrg)="composer($event)"></app-reporte1>
             </div>
@@ -13,7 +13,21 @@
                 <app-reporte3 style="height: 100%;width: 100%" fxLayout="column"></app-reporte3>
             </div>
         </div>
-        <div fxFlex="32%" style="background: salmon;height: 100%;width: 100%;">2</div>
-        <div fxFlex="32%" style="background: skyblue;height: 100%;width: 100%;">3</div>
+        <div fxLayout="column" fxLayoutAlign="space-between center" fxFlex="32%" style="height: 100%;width: 100%;">
+            <div fxFlex="17%" style="width: 100%;">
+                <app-reporte4></app-reporte4>
+            </div>
+            <mat-card fxLayout="column" fxFlex="82%" style="padding: 7px;height: 100%;width: 100%;background: skyblue;">
+                <!-- <app-reporte5 style="height: 100%;width: 100%" fxLayout="column"></app-reporte5> -->
+            </mat-card>
+        </div>
+        <div fxLayout="column" fxLayoutAlign="space-between center" fxFlex="33%" style="height: 100%;width: 100%;">
+            <div fxFlex="50%" style="width: 100%;">
+                <app-reporte6></app-reporte6>
+            </div>
+            <div fxFlex="49%" style="width: 100%;">
+                <app-reporte7></app-reporte7>
+            </div>
+        </div>
     </div>
 </div>
