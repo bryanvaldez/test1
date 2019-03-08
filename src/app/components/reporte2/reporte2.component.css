@@ -17,3 +17,37 @@
     font-weight: 600;
     font-size: 16px;
 }
+
+.pseudoBallon3 {
+    width: 180px;
+}
+
+.balArrow3 {
+    background: #000000;
+    width: 10px;
+    height: 10px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    position: absolute;
+    bottom: -14px;
+    left: -8px;
+}
+
+.pseudoBalTit3 {
+    color: #004085;
+    text-transform: uppercase;
+    border-bottom: #004085 solid 1px;
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+}
+
+.pseudoBalPres3 {
+    color: #00838F;
+}
+
+.pseudoBalNoPres3 {
+    color: #00838F;
+}

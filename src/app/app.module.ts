@@ -32,6 +32,7 @@ import { UsuariosComponent } from './pages/usuarios/usuarios.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { Reporte1Component } from './components/reporte1/reporte1.component';
 import { Reporte2Component } from './components/reporte2/reporte2.component';
+import { Reporte3Component } from './components/reporte3/reporte3.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +51,8 @@ import { Reporte2Component } from './components/reporte2/reporte2.component';
     UsuariosComponent,
     DashboardComponent,
     Reporte1Component,
-    Reporte2Component
+    Reporte2Component,
+    Reporte3Component
   ],
   imports: [
     BrowserModule,
