@@ -20,128 +20,172 @@ export class Reporte7Component implements AfterViewInit {
     am4core.useTheme(am4themes_animated);
     let chart: any;
     createChart();
-    function createChart() {
-      chart = am4core.create('chartdiv6', am4charts.XYChart);
-      chart.numberFormatter.numberFormat = '#a';
-      chart.numberFormatter.bigNumberPrefixes = [{ 'number': 1e+3, 'suffix': 'K', 'prefix': 'S/' }, { 'number': 1e+6, 'suffix': 'M', 'prefix': 'S/' }];
-      chart.data = [
-        {'country': 'PARTIDO POLÍTICO', 'year2004': 15151, 'year2005': 51156}, 
-        {'country': 'MOVIMIENTO REGIONAL', 'year2004': 16516, 'year2005': 61515},
-        {'country': 'ORGANIZACIÓN LOCAL(PROVINCIAL)', 'year2004': 1651, 'year2005': 61515},
-        {'country': 'ORGANIZACIÓN LOCAL(DISTRITAL)', 'year2004': 2166, 'year2005': 265561},
-        {'country': 'ORGANIZACIÓN LOCAL1', 'year2004': 1651, 'year2005': 61515},
-        {'country': 'ORGANIZACIÓN LOCAL2', 'year2004': 1651, 'year2005': 61515},
-        {'country': 'ORGANIZACIÓN LOCAL3', 'year2004': 1651, 'year2005': 61515},
-        {'country': 'ORGANIZACIÓN LOCAL4', 'year2004': 1651, 'year2005': 61515},
-        {'country': 'ORGANIZACIÓN LOCAL5', 'year2004': 1651, 'year2005': 61515},
-        {'country': 'ORGANIZACIÓN LOCAL6', 'year2004': 1651, 'year2005': 61515},
-        {'country': 'ORGANIZACIÓN LOCAL7', 'year2004': 1651, 'year2005': 61515},
-        {'country': 'ORGANIZACIÓN LOCAL8', 'year2004': 1651, 'year2005': 61515},
-        {'country': 'ORGANIZACIÓN LOCAL9', 'year2004': 1651, 'year2005': 61515},
-        {'country': 'ORGANIZACIÓN LOCAL10', 'year2004': 1651, 'year2005': 61515},
-        {'country': 'ORGANIZACIÓN LOCAL11', 'year2004': 1651, 'year2005': 61515},
-        {'country': 'ORGANIZACIÓN LOCAL12', 'year2004': 1651, 'year2005': 61515},
-        {'country': 'ORGANIZACIÓN LOCAL13', 'year2004': 1651, 'year2005': 61515},
-        {'country': 'ORGANIZACIÓN LOCAL14', 'year2004': 1651, 'year2005': 61515},
-        {'country': 'ORGANIZACIÓN LOCAL15', 'year2004': 1651, 'year2005': 61515},
-        {'country': 'ORGANIZACIÓN LOCAL16', 'year2004': 1651, 'year2005': 61515},
-        {'country': 'ORGANIZACIÓN LOCAL17', 'year2004': 1651, 'year2005': 61515},
-        {'country': 'ORGANIZACIÓN LOCAL18', 'year2004': 1651, 'year2005': 61515},
-        {'country': 'ORGANIZACIÓN LOCAL19', 'year2004': 1651, 'year2005': 61515},
-        {'country': 'ORGANIZACIÓN LOCAL20', 'year2004': 1651, 'year2005': 61515},
-        {'country': 'ORGANIZACIÓN LOCAL21', 'year2004': 1651, 'year2005': 61515},
-
-        {'country': 'ORGANIZACIÓN LOCAL22', 'year2004': 1651, 'year2005': 61515}
-
-      ];
-
-      const categoryAxis = chart.xAxes.push(new am4charts.CategoryAxis());
-      categoryAxis.dataFields.category = 'country';
-      categoryAxis.renderer.grid.template.location = 0;
-      categoryAxis.renderer.minGridDistance = 30;
-      categoryAxis.fontSize = 10;
-      categoryAxis.cursorTooltipEnabled = false;
-      categoryAxis.renderer.labels.template.maxWidth = 150;
-      categoryAxis.renderer.labels.template.wrap = true;
-      categoryAxis.marginBottom = -10;
-
-      const valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
-      valueAxis.title.fontWeight = 200;
-      valueAxis.fontSize = 10;
+    function createChart(){
+      chart = am4core.create("chartdiv7", am4charts.XYChart);
+      chart.hiddenState.properties.opacity = 0; // this creates initial fade-in
+      
+      chart.data = [{
+          'name': 'organizacion1',
+          "date": "2018-01-01",
+          "steps": 4561
+      }, {
+          'name': 'organizacion2',
+          "date": "2018-01-02",
+          "steps": 5687
+      }, {
+          'name': 'organizacion3',
+          "date": "2018-01-03",
+          "steps": 6348
+      }, {
+          'name': 'organizacion4',
+          "date": "2018-01-04",
+          "steps": 4878
+      }, {
+          'name': 'organizacion5',
+          "date": "2018-01-05",
+          "steps": 9867
+      }, {
+          'name': 'organizacion6',
+          "date": "2018-01-06",
+          "steps": 7561
+      }, {
+          'name': 'organizacion7',
+          "date": "2018-01-07",
+          "steps": 1287
+      }, {
+          "date": "2018-01-08",
+          "steps": 3298
+      }, {
+          "date": "2018-01-09",
+          "steps": 5697
+      }, {
+          "date": "2018-01-10",
+          "steps": 4878
+      }, {
+          "date": "2018-01-11",
+          "steps": 8788
+      }, {
+          "date": "2018-01-12",
+          "steps": 9560
+      }, {
+          "date": "2018-01-13",
+          "steps": 11687
+      }, {
+          "date": "2018-01-14",
+          "steps": 5878
+      }, {
+          "date": "2018-01-15",
+          "steps": 9789
+      }, {
+          "date": "2018-01-16",
+          "steps": 3987
+      }, {
+          "date": "2018-01-17",
+          "steps": 5898
+      }, {
+          "date": "2018-01-18",
+          "steps": 9878
+      }, {
+          "date": "2018-01-19",
+          "steps": 13687
+      }, {
+          "date": "2018-01-20",
+          "steps": 6789
+      }, {
+          "date": "2018-01-21",
+          "steps": 4531
+      }, {
+          "date": "2018-01-22",
+          "steps": 5856
+      }, {
+          "date": "2018-01-23",
+          "steps": 5737
+      }, {
+          "date": "2018-01-24",
+          "steps": 9987
+      }, {
+          "date": "2018-01-25",
+          "steps": 16457
+      }, {
+          "date": "2018-02-26",
+          "steps": 7878
+      }, {
+          "date": "2018-02-27",
+          "steps": 6845
+      }, {
+          "date": "2018-03-28",
+          "steps": 4659
+      }, {
+          "date": "2018-01-29",
+          "steps": 7892
+      }, {
+          "date": "2018-01-30",
+          "steps": 7362
+      }, {
+          "date": "2018-01-31",
+          "steps": 3268
+      }];
+      
+      chart.dateFormatter.inputDateFormat = "YYYY-MM-dd";
+      chart.zoomOutButton.disabled = true;
+      
+      var dateAxis = chart.xAxes.push(new am4charts.DateAxis());
+      dateAxis.renderer.grid.template.strokeOpacity = 0;
+      dateAxis.renderer.minGridDistance = 10;
+      dateAxis.dateFormats.setKey("month", "m");
+      dateAxis.tooltip.hiddenState.properties.opacity = 1;
+      dateAxis.tooltip.hiddenState.properties.visible = true;
+      
+      
+      dateAxis.tooltip.adapter.add("x", function (x, target) {
+          return am4core.utils.spritePointToSvg({ x: chart.plotContainer.pixelX, y: 0 }, chart.plotContainer).x + chart.plotContainer.pixelWidth / 2;
+      })
+      
+      var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
+      valueAxis.renderer.inside = true;
+      valueAxis.renderer.labels.template.fillOpacity = 0.3;
+      valueAxis.renderer.grid.template.strokeOpacity = 0;
+      valueAxis.min = 0;
       valueAxis.cursorTooltipEnabled = false;
+      
+      var series = chart.series.push(new am4charts.ColumnSeries);
+      series.dataFields.valueY = "steps";
+      series.dataFields.dateX = "date";
+      series.tooltipText = "{valueY.value}";
+      series.tooltip.pointerOrientation = "vertical";
+      series.tooltip.hiddenState.properties.opacity = 1;
+      series.tooltip.hiddenState.properties.visible = true;
+      series.tooltip.adapter.add("x", function (x, target) {
+          return am4core.utils.spritePointToSvg({ x: chart.plotContainer.pixelX, y: 0 }, chart.plotContainer).x + chart.plotContainer.pixelWidth / 2;
+      })
+      
+      var columnTemplate = series.columns.template;
+      columnTemplate.width = 30;
+      columnTemplate.column.cornerRadiusTopLeft = 20;
+      columnTemplate.column.cornerRadiusTopRight = 20;
+      columnTemplate.strokeOpacity = 0;
+      
+      var cursor = new am4charts.XYCursor();
+      cursor.behavior = "panX";
+      chart.cursor = cursor;
+      cursor.lineX.disabled = true;
+      
+      chart.events.on("datavalidated", function () {
+          console.log("7");
+          dateAxis.zoomToDates(new Date(2018, 0, 21), new Date(2018, 1, 1), false, true);
+      });
+      
+      cursor.events.on("cursorpositionchanged", updateTooltip);
+      dateAxis.events.on("datarangechanged", updateTooltip);
+      function updateTooltip() {
+        dateAxis.showTooltipAtPosition(0.5);
+        series.showTooltipAtPosition(0.5, 0);
+        series.tooltip.validate(); // otherwise will show other columns values for a second
+      }
 
-      const series = chart.series.push(new am4charts.ColumnSeries());
-      series.dataFields.valueY = 'year2004';
-      series.dataFields.categoryX = 'country';
-      series.clustered = false;
-      series.tooltipText = 'GDP grow in {categoryX} (2004): [bold]{valueY}[/]';
-      // series.columns.template.tooltipText = '[bold font-size: 22px; #fff]{categoryX}[/]\n[font-size: 20px]{name}:[/] [font-size: 20px #fff]{valueY}[/]';
-      series.tooltipHTML  =
-        `<table width=180>
-        <tr><th colspan="3" align="center" style="font-size:13px;"><strong>{categoryX}</strong></th></tr>
-        <tr>
-          <th align="left" style="font-size:12px;">Anexo A</th>
-          <td style="font-size:12px;">S/ 99000000</td>
-          <td align="right" style="font-size:12px;">100%</td>
-        </tr>
-        <tr>
-          <th style="font-size:12px;" align="left">Anexo B</th>
-          <td style="font-size:12px;">S/ 99000000</td>
-          <td align="right" style="font-size:12px;">100%</td>
-        </tr>
-        <tr>
-          <th style="font-size:12px;" align="left">Anexo C</th>
-          <td style="font-size:12px;">S/ 99000000</td>
-          <td align="right" style="font-size:12px;">100%</td>
-        </tr>
-        </table>`;
-
-      const series2 = chart.series.push(new am4charts.ColumnSeries());
-      series2.dataFields.valueY = 'year2005';
-      series2.dataFields.categoryX = 'country';
-      series2.clustered = false;
-      series2.columns.template.width = am4core.percent(50);
-      // series2.tooltipText = 'GDP grow in {categoryX} (2005): [bold]{valueY}[/]';
-      series2.tooltipHTML  =
-        `<table width=180>
-        <tr><th colspan="3" align="center" style="font-size:13px;"><strong>{categoryX}</strong></th></tr>
-        <tr>
-          <th align="left" style="font-size:12px;">Anexo A</th>
-          <td style="font-size:12px;">S/ 99000000</td>
-          <td align="right" style="font-size:12px;">100%</td>
-        </tr>
-        <tr>
-          <th style="font-size:12px;" align="left">Anexo B</th>
-          <td style="font-size:12px;">S/ 9900000</td>
-          <td align="right" style="font-size:12px;">20%</td>
-        </tr>
-        <tr>
-          <th style="font-size:12px;" align="left">Anexo C</th>
-          <td style="font-size:12px;">S/ 990000</td>
-          <td align="right" style="font-size:12px;">10%</td>
-        </tr>
-        </table>`;
-
-      chart.cursor = new am4charts.XYCursor();
-      chart.cursor.behavior = 'none';
-      chart.cursor.lineX.opacity = 0;
-      chart.cursor.lineY.opacity = 0;
-
-
-      chart.scrollbarX = new am4core.Scrollbar();
-      chart.scrollbarX.height = 5;
-      chart.scrollbarX.background.fill = am4core.color('green');
-      chart.scrollbarX.fillOpacity = 1;
-      chart.scrollbarX.stroke = am4core.color('rgba(0,0,0,.5)');
-      chart.scrollbarX.strokeWidth = 0.5;
-      chart.scrollbarX.margin(0, 30, 0, 30);
-      chart.scrollbarX.thumb.minWidth = 50;
-
-      chart.scrollbarX.startGrip.hide();
-      chart.scrollbarX.endGrip.hide();
+    }
+    
 
     }
 
   }
-
-}
