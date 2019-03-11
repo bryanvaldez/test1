@@ -23,6 +23,7 @@ export class Reporte6Component implements AfterViewInit {
       chart = am4core.create('chartdiv6', am4charts.XYChart);
       chart.numberFormatter.numberFormat = '#a';
       chart.zoomOutButton.disabled = true;
+      chart.mouseWheelBehavior = "panX";  
       chart.numberFormatter.bigNumberPrefixes = [{ 'number': 1e+3, 'suffix': 'K', 'prefix': 'S/' }, { 'number': 1e+6, 'suffix': 'M', 'prefix': 'S/' }];
       chart.data = [
         {'country': 'PARTIDO POLÍTICO', 'year2004': 15151, 'year2005': 51156, 'bullet': 'https://www.amcharts.com/lib/images/faces/A04.png'}, 
@@ -53,8 +54,7 @@ export class Reporte6Component implements AfterViewInit {
         {'country': 'ORGANIZACIÓN LOCAL22', 'year2004': 1651, 'year2005': 61515, 'bullet': 'https://www.amcharts.com/lib/images/faces/A04.png'}
       ];
       chart.events.on("datavalidated", function () {
-        console.log("6");
-        categoryAxis.zoomToIndexes (0,4, true, true);
+        categoryAxis.zoomToIndexes (0,4, false, true);
       });
 
       const categoryAxis = chart.xAxes.push(new am4charts.CategoryAxis());
@@ -66,6 +66,7 @@ export class Reporte6Component implements AfterViewInit {
       categoryAxis.renderer.labels.template.maxWidth = 150;
       categoryAxis.renderer.labels.template.wrap = true;
       categoryAxis.marginBottom = -10;
+      categoryAxis.align = 'center';        
 
       const valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
       valueAxis.title.fontWeight = 200;
